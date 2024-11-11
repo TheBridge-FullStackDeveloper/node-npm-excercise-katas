@@ -1,7 +1,8 @@
 // Require the lodash library here in this line
-
+var _ = require('lodash');
 function sum(a, b) {
-  // Use de add() function from lodash to sum the two numbers
+  return _.add(1,2); // Use de add() function from lodash to sum the two numbers
+
 }
 
 function filterFalsyValues(arr) {
