@@ -26,7 +26,7 @@ function fillArray(arr, value) {
 //#5
 function calculateMean(arr) {
   // Use the mean() function from lodash to calculate the mean of the array
-  console.log(arr);
+  //console.log(arr);
   return _.mean(arr);
 }
 
@@ -65,12 +65,22 @@ function flatArrayAndCalculateMean(arr) {
 function sortByNamesAndCapitalizeFirstLetter(arr) {
   // Use the sortBy() function from lodash to sort the array by name
   // Use the capitalize() function from lodash to capitalize the first letter of each name
+  //console.log(arr);
+  //   [ { name: 'john' }, { name: 'alex' } ]
+  const sortByName =  _.sortBy(arr, 'name');
+  const capitalizeName = sortByName.map(person => _.capitalize(person.name));
+  return capitalizeName;
+
 }
 
 //#11
 function transformToSnakeCaseAndAllCaps(arr) {
   // Use the snakeCase() function from lodash to convert the string to snake_case
   // Use the toUpper() function from lodash to convert the string to uppercase
+  //console.log(arr);
+  // [ 'Hello World' ]
+  const answer  = arr.map(phrase => _.toUpper(_.snakeCase(phrase)));
+  return answer;
 }
 
 
