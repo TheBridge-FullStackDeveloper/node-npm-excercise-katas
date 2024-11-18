@@ -33,23 +33,32 @@ function calculateMean(arr) {
 //#6
 function camelCase(str) {
   // Use the camelCase() function from lodash to convert the string to camelCase
+  return _.camelCase(str); 
 }
 
 
 //#7
 function capitalize(str) {
   // Use the capitalize() function from lodash to capitalize the string
+  return _.capitalize(str); 
 }
 
 //#8
 function sortByNames(arr) {
-  // Use the sortBy() function from lodash to sort the array by name
+   // Use the sortBy() function from lodash to sort the array by name
+  //console.log(arr);
+  //    [ { name: 'John' }, { name: 'Alex' } ]
+  return _.sortBy(arr, personsort => personsort.name[0]);
 }
 
 //#9
 function flatArrayAndCalculateMean(arr) {
   // Use the mean() function from lodash to calculate the mean of the array
   // Use the flatten() function from lodash to flatten the array
+ //console.log(arr);
+ // [ [ 1, 2 ], [ 3, 4 ] ]
+  const flatten = _.flattenDeep(arr);
+  return _.mean(flatten);
 }
 
 //#10
@@ -64,7 +73,7 @@ function transformToSnakeCaseAndAllCaps(arr) {
   // Use the toUpper() function from lodash to convert the string to uppercase
 }
 
-//#11
+
 module.exports = {
   sum,
   filterFalsyValues,
