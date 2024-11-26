@@ -5,7 +5,7 @@
 Primero instala todos los paquetes
 
 ```sh
-npm i
+   / 
 ```
 
 Instalar el paquete de lodash
